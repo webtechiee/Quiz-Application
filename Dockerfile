@@ -6,6 +6,6 @@ RUN mvn clean package -DskipTests
 
 # stage 2 RUNNING THE APPLICATION
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/myquestions-0.0.1-SNAPSHOT.jar question.jar
+COPY --from=build /target/demo-0.0.1-SNAPSHOT.jar question.jar
 EXPOSE 8989
 ENTRYPOINT ["java", "-jar", "question.jar"]
