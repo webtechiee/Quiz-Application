@@ -14,6 +14,7 @@ public class Quiz {
     @Column(name = "id", nullable = false)
     private Long id;
     private String title;
+    @ManyToMany
     private List<Question> questions;
 
 }
